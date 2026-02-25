@@ -1,0 +1,129 @@
+.kindergarten {
+  padding: var(--spacing-4xl) 0 !important;
+}
+
+.title {
+  text-align: center;
+  color: var(--color-purple-700);
+  margin-bottom: var(--spacing-md);
+}
+
+.concept {
+  text-align: center;
+  color: var(--color-purple-600);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+  font-style: italic;
+}
+
+.description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-2xl);
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-600);
+  line-height: 1.8;
+}
+
+.statusBadge {
+  display: inline-block;
+  background-color: var(--color-amber-500);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin: var(--spacing-xl) auto;
+  display: block;
+}
+
+.progressSection {
+  margin-top: var(--spacing-3xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-3xl);
+}
+
+.progressItem {
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-gray-200);
+}
+
+.progressTitle {
+  color: var(--color-purple-700);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+}
+
+.progressLabel {
+  text-align: center;
+  color: var(--color-purple-600);
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
+}
+
+.phaseLabels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  justify-content: center;
+}
+
+.phaseLabel {
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-600);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.phaseLabel.active {
+  background-color: var(--color-emerald-500);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .progressSection {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .description {
+    font-size: var(--font-size-base);
+  }
+
+  .concept {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .kindergarten {
+    padding: var(--spacing-2xl) 0 !important;
+  }
+
+  .progressItem {
+    padding: var(--spacing-lg);
+  }
+
+  .description {
+    font-size: var(--font-size-sm);
+  }
+
+  .phaseLabels {
+    gap: var(--spacing-xs);
+  }
+
+  .phaseLabel {
+    font-size: var(--font-size-2xs);
+    padding: var(--spacing-xs) var(--spacing-xs);
+  }
+}

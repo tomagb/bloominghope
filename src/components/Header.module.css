@@ -1,0 +1,112 @@
+.header {
+  background: linear-gradient(135deg, var(--color-purple-700) 0%, var(--color-purple-600) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-lg) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-4xl);
+}
+
+.logo {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  color: var(--color-white);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.nav {
+  display: flex;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  flex: 1;
+}
+
+.navLink {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.navLink:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.langSwitcher {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.langBtn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  border: 2px solid transparent;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.langBtn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.langBtn.active {
+  background-color: var(--color-emerald-500);
+  border-color: var(--color-emerald-500);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: var(--spacing-lg);
+  }
+
+  .navLink {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    gap: var(--spacing-lg);
+  }
+
+  .logo {
+    font-size: var(--font-size-xl);
+  }
+
+  .nav {
+    gap: var(--spacing-md);
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .navLink {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .langBtn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+}
