@@ -122,6 +122,14 @@ export const translations = {
       newsletterDesc:
         'Rămâi la curent cu noutățile de pe șantier și calendarul înscrierilor.',
     },
+    about: {
+      title: 'Despre Noi',
+      subtitle: 'Blooming Hope este o asociație dedicată transformării prin educație.',
+    },
+    contact: {
+      title: 'Contact',
+      subtitle: 'Suntem dornici să auzim de la tine. Conectează-te cu noi pentru întrebări sau colaborări.',
+    },
     donate: {
       title: 'Donează',
       subtitle: 'Ajută-ne să construim un viitor mai bun prin educație.',
@@ -265,6 +273,14 @@ export const translations = {
       newsletter: 'Newsletter',
       newsletterDesc:
         'Stay updated with construction site news and enrollment calendar.',
+    },
+    about: {
+      title: 'About Us',
+      subtitle: 'Blooming Hope is an association dedicated to transformation through education.',
+    },
+    contact: {
+      title: 'Contact',
+      subtitle: 'We\'d love to hear from you. Get in touch with us for any questions or collaborations.',
     },
     donate: {
       title: 'Donate',

@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { translations, Language } from '@/data/translations';
+import { translations } from '@/data/translations';
 import styles from './Header.module.css';
 
 export const Header: React.FC = () => {
