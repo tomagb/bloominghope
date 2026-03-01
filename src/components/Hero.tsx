@@ -16,8 +16,11 @@ export const Hero: React.FC = () => {
         <div className={styles.content}>
           <h1 className={styles.title}>{t.hero.title}</h1>
           <p className={styles.subtitle}>{t.hero.subtitle}</p>
+          <div className={styles.form230Container}>
+            <Link href="/donate" className={styles.form230Button}>{t.hero.form230}</Link>
+          </div>
           <div className={styles.ctaContainer}>
-            <Link href="/donate" className={styles.ctaPrimary}>{t.hero.cta1}</Link>
+            <a href="#kindergarten" className={styles.ctaSecondary}>{t.hero.cta1}</a>
             <a href="#growth-lab" className={styles.ctaSecondary}>{t.hero.cta2}</a>
           </div>
         </div>

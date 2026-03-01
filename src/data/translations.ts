@@ -15,8 +15,9 @@ export const translations = {
       title: 'Learn to Grow. Grow to Give',
       subtitle:
         'Asociația Blooming Hope: Construim locul unde copiii prind rădăcini sănătoase și tinerii învață să schimbe lumea.',
-      cta1: 'Susține Grădinița',
-      cta2: 'Laboratorul de creștere',
+      form230: 'Donează fără să te coste - Formular 230',
+      cta1: 'Grădinița Blooming Hope',
+      cta2: 'Atelier Blooming Hub',
     },
     motto: {
       title: 'Motto-ul Nostru',
@@ -26,7 +27,7 @@ export const translations = {
     mission: {
       title: 'Misiunea Noastră',
       intro:
-        'Educația nu este doar despre acumulare de informații, ci despre transformarea harului personal în serviciu pentru comunitate. Motiv pentru care urmăresc să dăm tinerilor instrumente practice pentru o viață cu sens.',
+        'Educația nu este doar despre acumulare de informații, ci despre transformarea harului personal în serviciu pentru comunitate. Motiv pentru care urmărim să dăm tinerilor instrumente practice pentru o viață cu sens.',
       pillars: [
         {
           title: 'Leadership',
@@ -51,10 +52,28 @@ export const translations = {
       ],
     },
     kindergarten: {
-      title: 'Proiectul Far: Grădinița Blooming Hope',
+      title: 'Proiectul: Grădinița Blooming Hope',
       concept: 'Rădăcini puternice pentru viitor',
-      description:
-        'Construim un mediu sustenabil și primitor, o ancoră fizică unde copiii se pot dezvolta în ritmul lor natural, înconjurați de armonie. În acest spațiu, implementăm un model educațional centrat pe caracter, transformând valorile morale în busola după care tinerii noștri înceți se vor ghida întreaga viață.',
+      description: [
+        {
+          type: 'paragraph',
+          content: [
+            'Construim un mediu sustenabil și primitor, o ancoră fizică unde copiii se pot dezvolta în ritmul lor natural, înconjurați de ',
+            { type: 'emphasis', text: 'armonie' },
+            '.',
+          ],
+        },
+        {
+          type: 'paragraph',
+          content: [
+            'În acest spațiu, implementăm un model educațional centrat pe ',
+            { type: 'emphasis', text: 'caracter' },
+            ', transformând ',
+            { type: 'emphasis', text: 'valorile morale' },
+            ' în busola după care tinerii noștri înceți se vor ghida întreaga viață.',
+          ],
+        },
+      ],
       status: 'În faza de proiect',
       progressBars: {
         donations: 'Progres Donații',
@@ -71,10 +90,10 @@ export const translations = {
       },
     },
     growthLab: {
-      title: 'Laboratorul de Creștere',
+      title: 'Blooming Hub',
       subtitle: 'Semințe pentru Viitor',
       description:
-        'Un spațiu de explorare unde teoria devine super-putere practică.',
+        'Dincolo de teorie, descoperă resursele de care ai nevoie pentru a naviga lumea cu încredere. Învață să stăpânești abilitățile care contează.',
       workshops: [
         {
           title: 'Securitate Online',
@@ -103,6 +122,22 @@ export const translations = {
       newsletterDesc:
         'Rămâi la curent cu noutățile de pe șantier și calendarul înscrierilor.',
     },
+    donate: {
+      title: 'Donează',
+      subtitle: 'Ajută-ne să construim un viitor mai bun prin educație.',
+      heroButton: 'Completează formularul 230',
+      form230: {
+        title: 'Formular 230 - Donează fără să îți coste',
+        description: 'Ești salariat și vrei să faci o diferență? Redirecționează 3,5% din impozitul tău pe venit către Blooming Hope. Nu te costă nimic - este o parte din impozitul care altfel ar rămâne la stat. Este dreptul și responsabilitatea ta să te implici în comunitate.',
+        howItWorks: [
+          'Redirecționează până la 25 mai 2026 completând declarația 230',
+          'Completează, semnează și depune formularul 230 online, într-un minut, fără drumuri la ANAF',
+          'Alege Blooming Hope și dă-i cu 3,5% mai multă putere',
+          'Declarația 230 se generează digital și ajunge direct în contul ONG-ului',
+        ],
+        buttonText: 'Completează Formularul 230',
+      },
+    },
     footer: {
       motto: 'Educația care transformă lumea',
       contact: 'Contact',
@@ -125,8 +160,9 @@ export const translations = {
       title: 'Learn to Grow. Grow to Give',
       subtitle:
         'Blooming Hope Association: We build the place where children develop healthy roots and young people learn to change the world.',
-      cta1: 'Support Kindergarten',
-      cta2: 'Growth Laboratory',
+      form230: 'Donate without your money - Form nr. 230',
+      cta1: 'Blooming Hope Kindergarten',
+      cta2: 'Blooming Hub Workshop',
     },
     motto: {
       title: 'Our Motto',
@@ -163,8 +199,26 @@ export const translations = {
     kindergarten: {
       title: 'Flagship Project: Blooming Hope Kindergarten',
       concept: 'Strong roots for the future',
-      description:
-        'We build a sustainable and welcoming environment, a physical anchor where children can develop at their natural pace, surrounded by harmony. In this space, we implement a character-centered educational model, transforming moral values into the compass that will guide our young learners throughout their lives.',
+      description: [
+        {
+          type: 'paragraph',
+          content: [
+            'We build a sustainable and welcoming environment, a physical anchor where children can develop at their natural pace, surrounded by ',
+            { type: 'emphasis', text: 'harmony' },
+            '.',
+          ],
+        },
+        {
+          type: 'paragraph',
+          content: [
+            'In this space, we implement a ',
+            { type: 'emphasis', text: 'character' },
+            '-centered educational model, transforming ',
+            { type: 'emphasis', text: 'moral values' },
+            ' into the compass that will guide our young learners throughout their lives.',
+          ],
+        },
+      ],
       status: 'In project phase',
       progressBars: {
         donations: 'Donation Progress',
@@ -180,10 +234,10 @@ export const translations = {
       },
     },
     growthLab: {
-      title: 'Growth Laboratory',
+      title: 'Blooming Hub',
       subtitle: 'Seeds for the Future',
       description:
-        'A space for exploration where theory becomes practical superpower.',
+        'Beyond theory, discover the resources you need to navigate the world with confidence. Learn to master the skills that matter.',
       workshops: [
         {
           title: 'Online Security',
@@ -211,6 +265,22 @@ export const translations = {
       newsletter: 'Newsletter',
       newsletterDesc:
         'Stay updated with construction site news and enrollment calendar.',
+    },
+    donate: {
+      title: 'Donate',
+      subtitle: 'Help us build a better future through education.',
+      heroButton: 'Fill form nr. 230',
+      form230: {
+        title: 'Form 230 - Donate Without Spending Money',
+        description: 'Are you an employee and want to make a difference? Redirect 3.5% of your income tax to Blooming Hope. It costs you nothing - it\'s a portion of the tax that would otherwise go to the state. It\'s your right and responsibility to get involved in your community.',
+        howItWorks: [
+          'Redirect until May 25, 2026 by completing Form 230',
+          'Fill out, sign and submit Form 230 online in one minute, without visiting the tax office',
+          'Choose Blooming Hope and give it 3.5% more power',
+          'Form 230 is generated digitally and goes directly into the NGO\'s account',
+        ],
+        buttonText: 'Complete Form 230',
+      },
     },
     footer: {
       motto: 'Education that transforms the world',

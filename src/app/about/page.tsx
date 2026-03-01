@@ -2,7 +2,6 @@
 
 import { Header } from '@/components/Header';
 import { MissionSection } from '@/components/MissionSection';
-import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/data/translations';
@@ -64,14 +63,13 @@ export default function About() {
             </h2>
             <p className={styles.text}>
               {language === 'ro'
-                ? 'Blooming Hope a fost înființată cu o simplă, dar puternică constatare: educația are puterea de a transforma vieți. Din această convingere, am creat o platformă unde teoria devine practică, unde valorile morale sunt gurul care ghidează deciziile, și unde fiecare tânăr descoperă că poate face diferența.'
+                ? 'Blooming Hope a fost înființată cu o simplă, dar puternică constatare: educația are puterea de a transforma vieți. Din această convingere, am creat o platformă unde teoria devine practică, unde valorile morale sunt cele care ghidează deciziile, și unde fiecare tânăr descoperă că poate face diferența.'
                 : 'Blooming Hope was founded on a simple yet powerful realization: education has the power to transform lives. From this conviction, we created a platform where theory becomes practice, where moral values guide decisions, and where every young person discovers they can make a difference.'}
             </p>
           </div>
         </div>
       </section>
       <MissionSection />
-      <CTASection />
       <Footer />
     </main>
   );

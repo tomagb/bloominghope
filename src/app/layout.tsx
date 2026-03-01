@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Blooming Hope - Education that Transforms',
   description: 'Blooming Hope Association: Building the place where children develop healthy roots and young people learn to change the world.',
   icons: {
-    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌸</text></svg>',
+    icon: '/logo-circle-transparent.png',
   },
 };
 

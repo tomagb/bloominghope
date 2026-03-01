@@ -10,34 +10,6 @@ export default function Donate() {
   const { language } = useLanguage();
   const t = translations[language];
 
-  const donationTiers = [
-    {
-      name: language === 'ro' ? 'Sprijinitor' : 'Supporter',
-      amount: '50 RON / €10',
-      benefits: language === 'ro'
-        ? ['Recunoaștere pe site', 'Newsletter lunar']
-        : ['Recognition on website', 'Monthly newsletter'],
-      icon: '🌱',
-    },
-    {
-      name: language === 'ro' ? 'Partener' : 'Partner',
-      amount: '500 RON / €100',
-      benefits: language === 'ro'
-        ? ['Recunoaștere pe site', 'Newsletter lunar', 'Rapoarte de impact', 'Invitații la evenimente']
-        : ['Recognition on website', 'Monthly newsletter', 'Impact reports', 'Event invitations'],
-      icon: '🌿',
-      featured: true,
-    },
-    {
-      name: language === 'ro' ? 'Fondator' : 'Founder',
-      amount: '5,000 RON / €1,000',
-      benefits: language === 'ro'
-        ? ['Recunoaștere pe site', 'Newsletter lunar', 'Rapoarte de impact', 'Invitații la evenimente', 'Placă de omagiere']
-        : ['Recognition on website', 'Monthly newsletter', 'Impact reports', 'Event invitations', 'Commemorative plaque'],
-      icon: '🌸',
-    },
-  ];
-
   return (
     <main>
       <Header />
@@ -54,68 +26,27 @@ export default function Donate() {
 
       <section className={styles.donateContent}>
         <div className="container">
-          <div className={styles.introBlock}>
+          <a
+            href="https://formular230.ro/asociatia-blooming-hope"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaButton}
+          >
+            {t.donate?.heroButton || (language === 'ro' ? 'Completează formularul 230' : 'Fill form nr. 230')}
+          </a>
+
+          <div className={styles.form230Block}>
             <h2 className={styles.sectionTitle}>
-              {language === 'ro' ? 'De ce să donezi?' : 'Why Donate?'}
+              {t.donate.form230.title}
             </h2>
-            <p className={styles.text}>
-              {language === 'ro'
-                ? 'Donațiile tale fac posibilă transformarea prin educație. Susțineri grădinița noastră, atelierele Growth Laboratory și programele de voluntariat care schimbă vieți.'
-                : 'Your donations make transformation through education possible. You support our kindergarten, Growth Laboratory workshops, and volunteering programs that change lives.'}
+            <p className={styles.form230Description}>
+              {t.donate.form230.description}
             </p>
-          </div>
-
-          <div className={styles.tiersGrid}>
-            {donationTiers.map((tier, index) => (
-              <div
-                key={index}
-                className={`${styles.tierCard} ${tier.featured ? styles.featured : ''}`}
-              >
-                <div className={styles.tierIcon}>{tier.icon}</div>
-                <h3 className={styles.tierName}>{tier.name}</h3>
-                <p className={styles.tierAmount}>{tier.amount}</p>
-                <ul className={styles.benefitsList}>
-                  {tier.benefits.map((benefit, i) => (
-                    <li key={i}>✓ {benefit}</li>
-                  ))}
-                </ul>
-                <button className={styles.donateBtn}>
-                  {language === 'ro' ? 'Donează Acum' : 'Donate Now'}
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <div className={styles.impactBlock}>
-            <h2 className={styles.sectionTitle}>
-              {language === 'ro' ? 'Impactul Tău' : 'Your Impact'}
-            </h2>
-            <div className={styles.impactGrid}>
-              <div className={styles.impactItem}>
-                <h4 className={styles.impactTitle}>
-                  {language === 'ro' ? '100 RON' : '€20'}
-                </h4>
-                <p className={styles.impactDesc}>
-                  {language === 'ro' ? 'Echipează un copil cu materiale educative' : 'Equips one child with educational materials'}
-                </p>
-              </div>
-              <div className={styles.impactItem}>
-                <h4 className={styles.impactTitle}>
-                  {language === 'ro' ? '500 RON' : '€100'}
-                </h4>
-                <p className={styles.impactDesc}>
-                  {language === 'ro' ? 'Finanțează un workshop complet' : 'Funds a complete workshop'}
-                </p>
-              </div>
-              <div className={styles.impactItem}>
-                <h4 className={styles.impactTitle}>
-                  {language === 'ro' ? '2,000 RON' : '€400'}
-                </h4>
-                <p className={styles.impactDesc}>
-                  {language === 'ro' ? 'Sprijină educația unui copil pentru 1 an' : 'Supports one child\'s education for 1 year'}
-                </p>
-              </div>
-            </div>
+            <ul className={styles.form230List}>
+              {t.donate.form230.howItWorks.map((item: string, index: number) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

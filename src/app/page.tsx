@@ -6,7 +6,6 @@ import { MottoSection } from '@/components/MottoSection';
 import { MissionSection } from '@/components/MissionSection';
 import { KindergartenSection } from '@/components/KindergartenSection';
 import { GrowthLabSection } from '@/components/GrowthLabSection';
-import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <MissionSection />
       <KindergartenSection />
       <GrowthLabSection />
-      <CTASection />
       <Footer />
     </main>
   );

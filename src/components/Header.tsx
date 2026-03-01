@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations, Language } from '@/data/translations';
 import styles from './Header.module.css';
@@ -12,9 +13,18 @@ export const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <div className="container">
+      <div className="{styles.container}">
         <div className={styles.content}>
-          <Link href="/" className={styles.logo}>{t.header.title}</Link>
+          <Link href="/" className={styles.branding}>
+            <Image
+              src="/logo-horizontal-transparent.png"
+              alt="Blooming Hope Logo"
+              width={240}
+              height={80}
+              priority
+            />
+            {/* <span className={styles.title}>{t.header.title}</span> */}
+          </Link>
           <nav className={styles.nav}>
             <Link href="/" className={styles.navLink}>{t.header.nav.home}</Link>
             <Link href="/about" className={styles.navLink}>{t.header.nav.about}</Link>
