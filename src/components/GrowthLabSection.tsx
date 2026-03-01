@@ -27,6 +27,10 @@ export const GrowthLabSection: React.FC = () => {
             />
           ))}
         </div>
+
+        <div className={styles.stickyNote}>
+          {t.growthLab.stickyNote}
+        </div>
       </div>
     </section>
   );

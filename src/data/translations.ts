@@ -112,6 +112,7 @@ export const translations = {
           description: 'Chimia mai practică decât ai crezut.',
         },
       ],
+      stickyNote: 'Rămâneți aproape pentru când și unde începe',
     },
     cta: {
       title: 'Implică-te!',
@@ -264,6 +265,7 @@ export const translations = {
           description: 'Chemistry more practical than you thought.',
         },
       ],
+      stickyNote: 'Stay tuned for when and where it starts',
     },
     cta: {
       title: 'Get Involved!',

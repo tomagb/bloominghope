@@ -30,6 +30,23 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-xl);
   margin-top: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.stickyNote {
+  background-color: #ffd54f;
+  border-radius: 4px;
+  padding: var(--spacing-lg);
+  max-width: 250px;
+  margin: 0 auto;
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+  font-family: 'Comic Sans MS', 'Permanent Marker', cursive;
+  text-align: center;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
