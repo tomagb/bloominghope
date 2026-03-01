@@ -1,5 +1,5 @@
 .kindergarten {
-  padding: var(--spacing-4xl) 0 !important;
+  padding: var(--spacing-4xl) 0;
 }
 
 .title {
@@ -107,7 +107,7 @@
 
 @media (max-width: 480px) {
   .kindergarten {
-    padding: var(--spacing-2xl) 0 !important;
+    padding: var(--spacing-2xl) 0;
   }
 
   .progressItem {

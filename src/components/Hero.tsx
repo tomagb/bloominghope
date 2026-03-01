@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
 
   return (
     <section className={styles.hero}>
-      <div className="container">
+      <div className="{styels.container}">
         <div className={styles.content}>
           <h1 className={styles.title}>{t.hero.title}</h1>
           <p className={styles.subtitle}>{t.hero.subtitle}</p>

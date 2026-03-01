@@ -1,7 +1,7 @@
 .hero {
   background: linear-gradient(135deg, var(--color-purple-600) 0%, var(--color-purple-500) 100%);
   color: var(--color-white);
-  padding: var(--spacing-4xl) var(--spacing-md) !important;
+  padding: var(--spacing-4xl) var(--spacing-md);
   min-height: 70vh;
   display: flex;
   align-items: center;

@@ -11,7 +11,7 @@ export const MottoSection: React.FC = () => {
 
   return (
     <section className={styles.motto}>
-      <div className="container">
+      <div className="{styels.container}">
         <div className={styles.content}>
           <p className={styles.description}>{t.motto.description}</p>
         </div>

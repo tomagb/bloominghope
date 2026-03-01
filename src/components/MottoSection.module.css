@@ -1,7 +1,7 @@
 .motto {
   background: linear-gradient(135deg, var(--color-purple-500) 0%, var(--color-purple-600) 100%);
   color: var(--color-white);
-  padding: var(--spacing-4xl) 0 !important;
+  padding: var(--spacing-4xl) 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@
 
 @media (max-width: 768px) {
   .motto {
-    padding: var(--spacing-3xl) 0 !important;
+    padding: var(--spacing-3xl) 0;
   }
 
   .description {
@@ -33,7 +33,7 @@
 
 @media (max-width: 480px) {
   .motto {
-    padding: var(--spacing-2xl) 0 !important;
+    padding: var(--spacing-2xl) 0;
   }
 
   .description {

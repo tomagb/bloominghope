@@ -1,5 +1,5 @@
 .cta {
-  padding: var(--spacing-4xl) 0 !important;
+  padding: var(--spacing-4xl) 0;
   background: linear-gradient(135deg, var(--color-purple-700) 0%, var(--color-purple-600) 100%);
   color: var(--color-white);
 }
@@ -92,7 +92,7 @@
 
 @media (max-width: 480px) {
   .cta {
-    padding: var(--spacing-2xl) 0 !important;
+    padding: var(--spacing-2xl) 0;
   }
 
   .grid {
