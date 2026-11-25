@@ -1,7 +1,7 @@
 .donateHero {
   background: linear-gradient(135deg, var(--color-purple-700) 0%, var(--color-purple-600) 100%);
   color: var(--color-white);
-  padding: var(--spacing-4xl) 0;
+  padding: var(--spacing-3xl) 0;
   text-align: center;
 }
 
@@ -14,247 +14,120 @@
 
 .subtitle {
   font-size: var(--font-size-xl);
-  margin-bottom: 0;
+  margin: 0 auto;
   color: #f0f9ff;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .donateContent {
-  padding: var(--spacing-4xl) 0;
-  background-color: var(--color-white);
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-3xl);
+}
+
+.intro {
+  font-size: var(--font-size-lg);
   text-align: center;
+  margin-bottom: var(--spacing-xl);
 }
 
-.ctaButton {
-  padding: var(--spacing-2xl) var(--spacing-4xl);
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  border-radius: var(--radius-2xl);
-  background: linear-gradient(135deg, var(--color-emerald-500) 0%, var(--color-emerald-400) 100%);
-  color: var(--color-white);
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition-base);
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+.card {
+  border: 1px solid var(--color-purple-200);
+  border-top: 4px solid var(--color-emerald-500);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 30px rgba(45, 27, 78, 0.1);
+  padding: var(--spacing-sm) var(--spacing-lg) 1.25rem;
 }
 
-.ctaButton:hover {
-  background: linear-gradient(135deg, var(--color-emerald-700) 0%, var(--color-emerald-600) 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs) var(--spacing-xl);
+  padding-top: 1.25rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
 }
 
-.introBlock {
-  margin-bottom: var(--spacing-4xl);
-  text-align: center;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+.meta strong {
+  color: var(--color-gray-900);
+}
+
+.howTo {
+  margin-top: var(--spacing-2xl);
 }
 
 .sectionTitle {
   font-size: var(--font-size-3xl);
   color: var(--color-purple-700);
-  margin-bottom: var(--spacing-2xl);
-  font-weight: 700;
 }
 
-.text {
-  font-size: var(--font-size-base);
-  line-height: 1.8;
-  color: var(--color-gray-700);
-  margin-bottom: 0;
-}
-
-.tiersGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-2xl);
-  margin-bottom: var(--spacing-4xl);
-}
-
-.tierCard {
-  background: var(--color-white);
-  border: 2px solid var(--color-purple-100);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
-  text-align: center;
-  transition: all var(--transition-base);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-}
-
-.tierCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-color: var(--color-emerald-300);
-}
-
-.tierCard.featured {
-  border-color: var(--color-emerald-500);
-  background: linear-gradient(135deg, var(--color-emerald-50) 0%, var(--color-purple-50) 100%);
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
-}
-
-.tierIcon {
-  font-size: var(--font-size-5xl);
-  margin-bottom: var(--spacing-sm);
-}
-
-.tierName {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--color-purple-700);
-  margin: 0;
-}
-
-.tierAmount {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  color: var(--color-emerald-600);
-  margin: 0;
-}
-
-.benefitsList {
+.steps {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  flex-grow: 1;
+  counter-reset: step;
 }
 
-.benefitsList li {
-  padding: var(--spacing-md) 0;
-  border-bottom: 1px solid var(--color-purple-100);
-  color: var(--color-gray-700);
+.steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  margin-bottom: 0.875rem;
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--color-purple-200);
+  color: var(--color-purple-700);
+  font-weight: 700;
   font-size: var(--font-size-sm);
-}
-
-.benefitsList li:last-child {
-  border-bottom: none;
-}
-
-.donateBtn {
-  background: linear-gradient(135deg, var(--color-emerald-600) 0%, var(--color-emerald-500) 100%);
-  color: var(--color-white);
-  border: none;
-  padding: var(--spacing-md) var(--spacing-2xl);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-base);
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  width: 100%;
-}
-
-.donateBtn:hover {
-  background: linear-gradient(135deg, var(--color-emerald-700) 0%, var(--color-emerald-600) 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
-}
-
-.impactBlock {
-  margin-top: var(--spacing-4xl);
-  padding-top: var(--spacing-4xl);
-  border-top: 2px solid var(--color-purple-100);
-}
-
-.impactGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-2xl);
-  margin-top: var(--spacing-2xl);
+  place-items: center;
 }
 
-.impactItem {
-  background: linear-gradient(135deg, var(--color-purple-50) 0%, var(--color-emerald-50) 100%);
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-md);
+.form230Block {
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-xl);
+  background: var(--color-purple-50);
+  border-radius: var(--radius-lg);
   border-left: 4px solid var(--color-emerald-500);
   text-align: center;
 }
 
-.impactTitle {
+.form230Title {
   font-size: var(--font-size-2xl);
-  color: var(--color-emerald-600);
-  font-weight: 700;
-  margin-bottom: var(--spacing-md);
-  margin: 0;
+  color: var(--color-purple-700);
 }
 
-.impactDesc {
-  font-size: var(--font-size-sm);
-  color: var(--color-gray-700);
-  line-height: 1.6;
-  margin: var(--spacing-md) 0 0 0;
-}
-
-.form230Block {
-  margin-top: var(--spacing-4xl);
-  padding: var(--spacing-3xl);
-  background: linear-gradient(135deg, var(--color-emerald-50) 0%, var(--color-purple-50) 100%);
-  border-radius: var(--radius-lg);
-  border-left: 4px solid var(--color-emerald-600);
-  text-align: center;
-}
-
-.form230Description {
-  font-size: var(--font-size-base);
-  color: var(--color-gray-700);
-  line-height: 1.8;
-  margin-bottom: var(--spacing-2xl);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.form230List {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--spacing-2xl) 0;
-  display: grid;
-  gap: var(--spacing-md);
-}
-
-.form230List li {
-  font-size: var(--font-size-sm);
-  color: var(--color-gray-700);
-  padding-left: var(--spacing-2xl);
-  position: relative;
-  line-height: 1.6;
-}
-
-.form230Button {
+.ctaButton {
   display: inline-block;
-  background: linear-gradient(135deg, var(--color-emerald-600) 0%, var(--color-emerald-500) 100%);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-emerald-500) 0%, var(--color-emerald-400) 100%);
   color: var(--color-white);
-  padding: var(--spacing-md) var(--spacing-3xl);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-base);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all var(--transition-fast);
-  border: none;
-  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+  transition: all var(--transition-base);
 }
 
-.form230Button:hover {
-  background: linear-gradient(135deg, var(--color-emerald-700) 0%, var(--color-emerald-600) 100%);
+.ctaButton:hover {
+  color: var(--color-white);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.45);
+}
+
+.thanks {
+  margin: var(--spacing-2xl) 0 0;
+  text-align: center;
+  font-style: italic;
+  font-size: var(--font-size-lg);
 }
 
 @media (max-width: 768px) {
-  .donateHero {
-    padding: var(--spacing-3xl) 0;
-  }
-
   .title {
     font-size: var(--font-size-3xl);
   }
@@ -262,77 +135,41 @@
   .subtitle {
     font-size: var(--font-size-lg);
   }
-
-  .donateContent {
-    padding: var(--spacing-3xl) 0;
-  }
-
-  .tiersGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .tierCard.featured {
-    transform: scale(1);
-  }
 }
 
 @media (max-width: 480px) {
   .donateHero {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
   }
 
   .title {
     font-size: var(--font-size-2xl);
   }
 
-  .subtitle {
+  .subtitle,
+  .intro {
     font-size: var(--font-size-base);
   }
 
   .donateContent {
-    padding: var(--spacing-2xl) 0;
+    padding-top: var(--spacing-xl);
   }
 
-  .sectionTitle {
+  .card {
+    padding: var(--spacing-xs) var(--spacing-md) var(--spacing-md);
+  }
+
+  .sectionTitle,
+  .form230Title {
     font-size: var(--font-size-xl);
   }
 
-  .text {
-    font-size: var(--font-size-sm);
-  }
-
-  .tierCard {
-    padding: var(--spacing-lg);
-  }
-
-  .tierName {
-    font-size: var(--font-size-lg);
-  }
-
-  .tierAmount {
-    font-size: var(--font-size-lg);
-  }
-
-  .impactGrid {
-    gap: var(--spacing-lg);
-  }
-
-  .impactItem {
-    padding: var(--spacing-lg);
-  }
-
   .form230Block {
-    margin-top: var(--spacing-3xl);
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 
-  .form230Description {
-    font-size: var(--font-size-sm);
-  }
-
-  .form230Button {
-    width: 100%;
-    text-align: center;
-    padding: var(--spacing-md) var(--spacing-2xl);
+  .ctaButton {
+    display: block;
+    font-size: var(--font-size-base);
   }
 }

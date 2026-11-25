@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className={styles.bottom}>
-          <p>&copy; 2024 Blooming Hope. All rights reserved.</p>
+          <p>&copy; 2026 Blooming Hope. {t.footer.rights}</p>
         </div>
       </div>
     </footer>
