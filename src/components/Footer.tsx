@@ -22,6 +22,7 @@ export const Footer: React.FC = () => {
 
         <div className={styles.bottom}>
           <nav className={styles.legal}>
+            <Link href="/contact">{t.header.nav.contact}</Link>
             <Link href="/terms">{t.footer.terms}</Link>
             <Link href="/privacy">{t.footer.privacy}</Link>
             <Link href="/cookies">{t.footer.cookies}</Link>
