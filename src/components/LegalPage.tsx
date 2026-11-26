@@ -5,7 +5,22 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { legal, LegalSlug } from '@/data/legal';
+import { organization } from '@/data/organization';
 import styles from './LegalPage.module.css';
+
+// Adresa sediului se afișează mai discret decât textul din jur.
+const withSmallAddress = (text: string): React.ReactNode => {
+  const { address } = organization;
+  if (!address || !text.includes(address)) return text;
+  const [before, after] = text.split(address);
+  return (
+    <>
+      {before}
+      <span className={styles.address}>{address}</span>
+      {after}
+    </>
+  );
+};
 
 export const LegalPage: React.FC<{ slug: LegalSlug }> = ({ slug }) => {
   const { language } = useLanguage();
@@ -20,7 +35,7 @@ export const LegalPage: React.FC<{ slug: LegalSlug }> = ({ slug }) => {
         {doc.sections.map((section) => (
           <div key={section.heading}>
             <h2>{section.heading}</h2>
-            {section.paragraphs?.map((text) => <p key={text}>{text}</p>)}
+            {section.paragraphs?.map((text) => <p key={text}>{withSmallAddress(text)}</p>)}
             {section.items && (
               <ul>
                 {section.items.map((item) => (
