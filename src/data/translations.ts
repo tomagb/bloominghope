@@ -11,6 +11,20 @@ export const translations = {
         contact: 'Contact',
       },
     },
+    campaign: {
+      title: 'Și pentru ei e\u00a0loc.',
+      subtitle: 'De Crăciun, bucuria se dă mai departe',
+      description:
+        'Donează pentru educația unui copil și primește din partea noastră un cadou pentru cineva drag.',
+      donate: 'Donează acum',
+      form230: 'Formularul 230',
+      initiative: 'O inițiativă caritabilă a',
+      educationPartner: 'Partener educațional',
+      partner: 'Partener',
+      sponsor: 'Sponsor',
+      logoAlt: 'Viitor în dar',
+      imageAlt: 'O bancă de școală luminată de o stea, într-o noapte de iarnă',
+    },
     hero: {
       title: 'Learn to Grow. Grow to Give',
       subtitle:
@@ -182,6 +196,20 @@ export const translations = {
         donate: 'Donate',
         contact: 'Contact',
       },
+    },
+    campaign: {
+      title: 'There is room for them\u00a0too.',
+      subtitle: 'At Christmas, joy is passed on',
+      description:
+        'Donate for a child’s education and receive from us a gift for someone dear to you.',
+      donate: 'Donate now',
+      form230: 'Form 230',
+      initiative: 'A charity initiative of',
+      educationPartner: 'Educational partner',
+      partner: 'Partner',
+      sponsor: 'Sponsor',
+      logoAlt: 'Viitor în dar',
+      imageAlt: 'A school desk lit by a star on a winter night',
     },
     hero: {
       title: 'Learn to Grow. Grow to Give',

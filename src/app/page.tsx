@@ -1,6 +1,7 @@
 'use client';
 
 import { Header } from '@/components/Header';
+import { CampaignHero } from '@/components/CampaignHero';
 import { Hero } from '@/components/Hero';
 import { MottoSection } from '@/components/MottoSection';
 import { MissionSection } from '@/components/MissionSection';
@@ -12,7 +13,11 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <Hero />
+      {/* grupate, ca alternanta de culori section:nth-child sa ramana neschimbata */}
+      <div>
+        <CampaignHero />
+        <Hero />
+      </div>
       <MottoSection />
       <MissionSection />
       <KindergartenSection />
