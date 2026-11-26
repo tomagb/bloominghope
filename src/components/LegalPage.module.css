@@ -28,6 +28,8 @@
 
 .page .address {
   font-size: 0.8em;
+  /* gri deschis, cu contrast 4,8:1 pe alb (peste pragul de lizibilitate 4,5:1) */
+  color: #6b7280;
 }
 
 .page .updated {
