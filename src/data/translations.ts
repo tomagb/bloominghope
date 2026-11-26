@@ -12,10 +12,10 @@ export const translations = {
       },
     },
     campaign: {
-      title: 'Și pentru ei e\u00a0loc.',
-      subtitle: 'De Crăciun, bucuria se dă mai departe',
+      title: 'Și pentru ei e\u00a0loc',
+      subtitle: 'Un dar primit azi, un viitor dăruit mâine.',
       description:
-        'Donează pentru educația unui copil. La căsuța noastră te așteaptă un cadou pentru cineva drag.',
+        'Donează pentru educația unui copil și primește din partea noastră un cadou pentru cineva drag',
       donate: 'Donează acum',
       form230: 'Formularul 230',
       initiative: 'O inițiativă caritabilă a',
@@ -206,10 +206,10 @@ export const translations = {
       },
     },
     campaign: {
-      title: 'There is room for them\u00a0too.',
-      subtitle: 'At Christmas, joy is passed on',
+      title: 'There is room for them\u00a0too',
+      subtitle: 'A gift received today, a future given tomorrow.',
       description:
-        'Donate for a child’s education. A gift for someone dear to you is waiting at our stall.',
+        'Donate for a child’s education and receive from us a gift for someone dear to you',
       donate: 'Donate now',
       form230: 'Form 230',
       initiative: 'A charity initiative of',

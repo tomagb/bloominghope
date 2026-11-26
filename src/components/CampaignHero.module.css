@@ -68,6 +68,7 @@
 
 .text .subtitle {
   font-weight: 600;
+  text-wrap: balance;
   font-size: clamp(24px, 2.4vw, 32px);
   line-height: 1.2;
   color: #f6e7c8;
