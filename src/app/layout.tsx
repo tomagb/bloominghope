@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import { CookieNotice } from '@/components/CookieNotice';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <CookieNotice />
+        </LanguageProvider>
       </body>
     </html>
   );

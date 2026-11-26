@@ -96,13 +96,14 @@ const ro: Record<LegalSlug, LegalDocument> = {
       {
         heading: '1. Pe scurt',
         paragraphs: [
-          'Acest site nu folosește cookie-uri de statistică, de publicitate sau de urmărire și nu încarcă astfel de instrumente de la terți. De aceea nu îți afișăm o fereastră de consimțământ.',
+          'Acest site nu folosește cookie-uri de statistică, de publicitate sau de urmărire și nu încarcă astfel de instrumente de la terți. De aceea nu îți cerem consimțământul; îți afișăm doar o notă informativă, pe care o poți închide.',
         ],
       },
       {
         heading: '2. Ce se salvează în browser',
         paragraphs: [
           'Dacă alegi limba din meniu (RO sau EN), browserul memorează alegerea în „local storage”, sub numele „language”. Valoarea este „ro” sau „en”, rămâne doar pe dispozitivul tău, nu ne este transmisă și nu te identifică. Este strict necesară pentru funcția pe care ai cerut-o, motiv pentru care nu cere consimțământ (art. 4 alin. (5) din Legea nr. 506/2004).',
+          'Când închizi nota informativă cu „Am înțeles”, browserul memorează, tot în „local storage”, valoarea „ok” sub numele „cookieNotice”, ca să nu o mai afișeze. Nici aceasta nu ne este transmisă.',
         ],
       },
       {
@@ -261,13 +262,14 @@ const en: Record<LegalSlug, LegalDocument> = {
       {
         heading: '1. In short',
         paragraphs: [
-          'This website uses no analytics, advertising or tracking cookies and loads no such third-party tools. That is why we show no consent banner.',
+          'This website uses no analytics, advertising or tracking cookies and loads no such third-party tools. That is why we ask for no consent; we only show an information notice, which you can close.',
         ],
       },
       {
         heading: '2. What is stored in your browser',
         paragraphs: [
           'If you choose a language in the menu (RO or EN), your browser remembers it in local storage under the name “language”. The value is “ro” or “en”, stays on your device, is not sent to us and does not identify you. It is strictly necessary for the function you asked for, so it needs no consent (Art. 4(5) of Romanian Law no. 506/2004).',
+          'When you close the information notice with “Got it”, your browser also stores the value “ok” in local storage under the name “cookieNotice”, so the notice is not shown again. It is not sent to us either.',
         ],
       },
       {

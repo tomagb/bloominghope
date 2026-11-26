@@ -178,6 +178,12 @@ export const translations = {
       },
       thanks: 'Îți mulțumim! Fiecare donație ajută copiii să prindă rădăcini sănătoase și tinerii să învețe să schimbe lumea.',
     },
+    cookieNotice: {
+      label: 'Informare despre cookie-uri',
+      text: 'Acest site nu folosește cookie-uri de urmărire. Reținem în browser doar alegerile tale: limba și faptul că ai închis această notă.',
+      link: 'Politica de cookie-uri',
+      button: 'Am înțeles',
+    },
     footer: {
       motto: 'Educația care transformă lumea',
       contact: 'Contact',
@@ -363,6 +369,12 @@ export const translations = {
         buttonText: 'Complete Form 230',
       },
       thanks: 'Thank you! Every donation helps children grow healthy roots and young people learn to change the world.',
+    },
+    cookieNotice: {
+      label: 'Cookie information',
+      text: 'This website uses no tracking cookies. Your browser only remembers your choices: the language and that you closed this notice.',
+      link: 'Cookie Policy',
+      button: 'Got it',
     },
     footer: {
       motto: 'Education that transforms the world',
