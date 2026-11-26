@@ -5,3 +5,6 @@ out
 .env
 .env.local
 .env.*.local
+.backups
+.DS_Store
+*.zip

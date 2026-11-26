@@ -2,6 +2,7 @@
 
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/data/translations';
 import styles from './contact.module.css';
@@ -28,11 +29,10 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // Site-ul nu are server: mesajul se deschide în aplicația de email a vizitatorului.
+    const body = `${formData.message}\n\n${formData.name}\n${formData.email}`;
+    window.location.href = `mailto:contact@bloominghope.ro?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
   };
 
   const contactInfo = [
@@ -43,15 +43,9 @@ export default function Contact() {
       link: 'mailto:contact@bloominghope.ro',
     },
     {
-      icon: '📱',
-      title: language === 'ro' ? 'Telefon' : 'Phone',
-      content: '+40 XXX XXX XXX',
-      link: 'tel:+40XXXXXXXXX',
-    },
-    {
       icon: '📍',
       title: language === 'ro' ? 'Locație' : 'Location',
-      content: language === 'ro' ? 'București, România' : 'Bucharest, Romania',
+      content: language === 'ro' ? 'Cluj-Napoca, România' : 'Cluj-Napoca, Romania',
       link: '#',
     },
   ];
@@ -89,17 +83,6 @@ export default function Contact() {
                 ))}
               </div>
 
-              <div className={styles.socialSection}>
-                <h3 className={styles.socialTitle}>
-                  {language === 'ro' ? 'Urmărește-ne' : 'Follow Us'}
-                </h3>
-                <div className={styles.socialLinks}>
-                  <a href="#" aria-label="Facebook" className={styles.socialLink}>f</a>
-                  <a href="#" aria-label="Instagram" className={styles.socialLink}>📷</a>
-                  <a href="#" aria-label="Twitter" className={styles.socialLink}>𝕏</a>
-                  <a href="#" aria-label="LinkedIn" className={styles.socialLink}>in</a>
-                </div>
-              </div>
             </div>
 
             <div className={styles.contactForm}>
@@ -109,8 +92,8 @@ export default function Contact() {
               {submitted && (
                 <div className={styles.successMessage}>
                   {language === 'ro'
-                    ? '✓ Mulțumim! Am primit mesajul tău. Te vom contacta în curând.'
-                    : '✓ Thank you! We received your message. We\'ll get back to you soon.'}
+                    ? 'Am deschis aplicația ta de email. Mesajul ajunge la noi după ce îl trimiți de acolo. Dacă nu s-a deschis, scrie-ne la contact@bloominghope.ro.'
+                    : 'We opened your email app. Your message reaches us once you send it from there. If nothing opened, write to contact@bloominghope.ro.'}
                 </div>
               )}
               <form onSubmit={handleSubmit} className={styles.form}>
@@ -174,8 +157,16 @@ export default function Contact() {
                   />
                 </div>
 
+                <p>
+                  <Link href="/privacy">
+                    {language === 'ro'
+                      ? 'Cum folosim datele tale: Politica de confidențialitate'
+                      : 'How we use your data: Privacy Policy'}
+                  </Link>
+                </p>
+
                 <button type="submit" className={styles.submitBtn}>
-                  {language === 'ro' ? 'Trimite' : 'Send'}
+                  {language === 'ro' ? 'Deschide în email' : 'Open in email'}
                 </button>
               </form>
             </div>

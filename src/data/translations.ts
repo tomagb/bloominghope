@@ -15,7 +15,7 @@ export const translations = {
       title: 'Și pentru ei e\u00a0loc.',
       subtitle: 'De Crăciun, bucuria se dă mai departe',
       description:
-        'Donează pentru educația unui copil și primește din partea noastră un cadou pentru cineva drag.',
+        'Donează pentru educația unui copil. La căsuța noastră te așteaptă un cadou pentru cineva drag.',
       donate: 'Donează acum',
       form230: 'Formularul 230',
       initiative: 'O inițiativă caritabilă a',
@@ -184,7 +184,9 @@ export const translations = {
       socialMedia: 'Urmărește-ne',
       email: 'contact@bloominghope.ro',
       rights: 'Toate drepturile rezervate.',
-      phone: '+40 XXX XXX XXX',
+      terms: 'Termeni și condiții',
+      privacy: 'Confidențialitate',
+      cookies: 'Cookie-uri',
     },
   },
   en: {
@@ -201,7 +203,7 @@ export const translations = {
       title: 'There is room for them\u00a0too.',
       subtitle: 'At Christmas, joy is passed on',
       description:
-        'Donate for a child’s education and receive from us a gift for someone dear to you.',
+        'Donate for a child’s education. A gift for someone dear to you is waiting at our stall.',
       donate: 'Donate now',
       form230: 'Form 230',
       initiative: 'A charity initiative of',
@@ -366,9 +368,11 @@ export const translations = {
       motto: 'Education that transforms the world',
       contact: 'Contact',
       socialMedia: 'Follow Us',
-      email: 'contact@bloominghope.com',
+      email: 'contact@bloominghope.ro',
       rights: 'All rights reserved.',
-      phone: '+40 XXX XXX XXX',
+      terms: 'Terms and Conditions',
+      privacy: 'Privacy',
+      cookies: 'Cookies',
     },
   },
 };

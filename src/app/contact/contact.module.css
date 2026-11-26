@@ -1,3 +1,15 @@
+/* Culori folosite doar aici și nedefinite în globals.css */
+.contactHero,
+.contactContent {
+  --color-rose-600: #e11d48;
+  --color-rose-700: #be123c;
+  --color-purple-100: #efe9f8;
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-700: #047857;
+  --color-gray-700: #374151;
+}
+
 .contactHero {
   background: linear-gradient(135deg, var(--color-rose-600) 0%, var(--color-rose-500) 100%);
   color: var(--color-white);
@@ -15,6 +27,7 @@
 .subtitle {
   font-size: var(--font-size-xl);
   margin-bottom: 0;
+  color: var(--color-white);
   opacity: 0.95;
   max-width: 600px;
   margin-left: auto;

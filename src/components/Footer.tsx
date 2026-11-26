@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/data/translations';
 import styles from './Footer.module.css';
@@ -20,6 +21,11 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className={styles.bottom}>
+          <nav className={styles.legal}>
+            <Link href="/terms">{t.footer.terms}</Link>
+            <Link href="/privacy">{t.footer.privacy}</Link>
+            <Link href="/cookies">{t.footer.cookies}</Link>
+          </nav>
           <p>&copy; 2026 Blooming Hope. {t.footer.rights}</p>
         </div>
       </div>

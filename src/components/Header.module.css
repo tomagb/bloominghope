@@ -97,24 +97,30 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  /* Rândul 1: sigla și limba; rândul 2: meniul pe toată lățimea */
   .content {
-    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: 0 var(--spacing-md);
   }
 
-  .logo {
-    font-size: var(--font-size-xl);
+  .branding img {
+    height: 56px;
   }
 
   .nav {
-    gap: var(--spacing-md);
-    flex-direction: column;
-    gap: var(--spacing-sm);
+    order: 3;
+    flex: 1 0 100%;
+    justify-content: space-around;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
   }
 
   .navLink {
     font-size: var(--font-size-sm);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-sm);
+    white-space: nowrap;
   }
 
   .langBtn {

@@ -1,0 +1,45 @@
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  overflow-wrap: break-word;
+}
+
+.page h1 {
+  font-size: var(--font-size-4xl);
+  color: var(--color-purple-900);
+}
+
+.page h2 {
+  font-size: var(--font-size-xl);
+  color: var(--color-purple-700);
+  margin-top: var(--spacing-2xl);
+}
+
+.page p,
+.page li {
+  color: var(--color-gray-600);
+  line-height: 1.75;
+}
+
+.page ul {
+  padding-left: var(--spacing-xl);
+}
+
+.page .updated {
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .page h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .page h2 {
+    font-size: var(--font-size-lg);
+  }
+}

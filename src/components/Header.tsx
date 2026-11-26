@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <div className="{styles.container}">
+      <div>
         <div className={styles.content}>
           <Link href="/" className={styles.branding}>
             <Image
