@@ -1,64 +1,38 @@
-.donateHero {
-  background: linear-gradient(135deg, var(--color-purple-700) 0%, var(--color-purple-600) 100%);
-  color: var(--color-white);
-  padding: var(--spacing-3xl) 0;
-  text-align: center;
-}
-
-.title {
-  font-size: var(--font-size-5xl);
-  font-weight: 700;
-  margin-bottom: var(--spacing-md);
-  line-height: 1.2;
-}
-
-.subtitle {
-  font-size: var(--font-size-xl);
-  margin: 0 auto;
-  color: #f0f9ff;
-  max-width: 600px;
-}
-
 .donateContent {
-  max-width: 640px;
+  max-width: 696px;
   margin: 0 auto;
-  padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-3xl);
+  padding: 72px 28px;
 }
 
 .intro {
-  font-size: var(--font-size-lg);
+  margin: 0 0 24px;
+  color: var(--color-muted);
+  font-size: 19px;
+  line-height: 1.65;
   text-align: center;
-  margin-bottom: var(--spacing-xl);
 }
 
 .card {
-  border: 1px solid var(--color-purple-200);
-  border-top: 4px solid var(--color-emerald-500);
-  border-radius: var(--radius-xl);
-  box-shadow: 0 10px 30px rgba(45, 27, 78, 0.1);
-  padding: var(--spacing-sm) var(--spacing-lg) 1.25rem;
+  padding: 10px 26px 24px;
+  border: 1px solid var(--color-line);
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(45, 27, 78, 0.12);
 }
 
 .meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-xs) var(--spacing-xl);
-  padding-top: 1.25rem;
-  font-size: var(--font-size-sm);
-  color: var(--color-gray-600);
-}
-
-.meta strong {
-  color: var(--color-gray-900);
+  margin: 16px 0 0;
+  color: var(--color-muted);
+  font-size: 14px;
 }
 
 .howTo {
-  margin-top: var(--spacing-2xl);
+  margin-top: 44px;
 }
 
 .sectionTitle {
-  font-size: var(--font-size-3xl);
-  color: var(--color-purple-700);
+  margin-bottom: 14px;
+  color: var(--color-purple-900);
+  font-size: 27px;
 }
 
 .steps {
@@ -68,108 +42,72 @@
 
 .steps li {
   display: flex;
-  align-items: flex-start;
-  gap: 0.875rem;
-  margin-bottom: 0.875rem;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 0;
   counter-increment: step;
 }
 
 .steps li::before {
   content: counter(step);
-  flex-shrink: 0;
-  width: 1.75rem;
-  height: 1.75rem;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--color-purple-200);
   color: var(--color-purple-700);
-  font-weight: 700;
-  font-size: var(--font-size-sm);
-  display: grid;
-  place-items: center;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .form230Block {
-  margin-top: var(--spacing-2xl);
-  padding: var(--spacing-xl);
+  margin-top: 36px;
+  padding: 28px;
+  border-radius: 22px;
   background: var(--color-purple-50);
-  border-radius: var(--radius-lg);
-  border-left: 4px solid var(--color-emerald-500);
   text-align: center;
 }
 
 .form230Title {
-  font-size: var(--font-size-2xl);
-  color: var(--color-purple-700);
+  margin-bottom: 8px;
+  color: var(--color-purple-900);
+  font-size: 23px;
 }
 
-.ctaButton {
-  display: inline-block;
-  padding: var(--spacing-md) var(--spacing-xl);
-  font-size: var(--font-size-lg);
-  font-weight: 700;
-  border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, var(--color-emerald-500) 0%, var(--color-emerald-400) 100%);
-  color: var(--color-white);
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
-  transition: all var(--transition-base);
-}
-
-.ctaButton:hover {
-  color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.45);
+.form230Block p {
+  margin-bottom: 18px;
+  color: var(--color-muted);
 }
 
 .thanks {
-  margin: var(--spacing-2xl) 0 0;
-  text-align: center;
+  margin: 36px 0 0;
+  color: var(--color-muted);
+  font-size: 19px;
   font-style: italic;
-  font-size: var(--font-size-lg);
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .title {
-    font-size: var(--font-size-3xl);
-  }
-
-  .subtitle {
-    font-size: var(--font-size-lg);
+@media (max-width: 900px) {
+  .donateContent {
+    padding: 48px 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .donateHero {
-    padding: var(--spacing-xl) 0;
-  }
-
-  .title {
-    font-size: var(--font-size-2xl);
-  }
-
-  .subtitle,
-  .intro {
-    font-size: var(--font-size-base);
-  }
-
-  .donateContent {
-    padding-top: var(--spacing-xl);
-  }
-
   .card {
-    padding: var(--spacing-xs) var(--spacing-md) var(--spacing-md);
-  }
-
-  .sectionTitle,
-  .form230Title {
-    font-size: var(--font-size-xl);
+    padding: 6px 18px 20px;
   }
 
   .form230Block {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: 24px 18px;
   }
+}
 
-  .ctaButton {
-    display: block;
-    font-size: var(--font-size-base);
+@media (max-width: 380px) {
+  .card {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }

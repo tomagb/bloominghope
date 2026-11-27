@@ -40,7 +40,7 @@
   max-width: 1240px;
   margin: 0 auto;
   padding: 56px 40px 28px;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 96px);
   max-height: 860px;
   display: flex;
   flex-direction: column;

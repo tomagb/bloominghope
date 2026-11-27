@@ -3,6 +3,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/data/translations';
+import ui from '@/styles/ui.module.css';
 import styles from './KindergartenSection.module.css';
 
 const renderContent = (content: any[]): React.ReactNode[] => {
@@ -11,14 +12,7 @@ const renderContent = (content: any[]): React.ReactNode[] => {
       return item;
     }
     if (item.type === 'emphasis') {
-      return (
-        <span
-          key={index}
-          style={{ color: '#7c3aed', fontWeight: 'bold' }}
-        >
-          {item.text}
-        </span>
-      );
+      return <strong key={index}>{item.text}</strong>;
     }
     return null;
   });
@@ -29,19 +23,27 @@ export const KindergartenSection: React.FC = () => {
   const t = translations[language];
 
   return (
-    <section className={styles.kindergarten} id="kindergarten">
-      <div className="container">
-        <h2 className={styles.title}>{t.kindergarten.title}</h2>
-        <h3 className={styles.concept}>{t.kindergarten.concept}</h3>
-        {Array.isArray(t.kindergarten.description) ? (
-          t.kindergarten.description.map((para: any, index: number) => (
-            <p key={index} className={styles.description}>
-              {para.type === 'paragraph' ? renderContent(para.content) : para}
-            </p>
-          ))
-        ) : (
-          <p className={styles.description}>{t.kindergarten.description}</p>
-        )}
+    <section className={`${ui.section} ${ui.soft} ${ui.center}`} id="kindergarten">
+      <div className={ui.wrap}>
+        <h2 className={ui.heading}>{t.kindergarten.title}</h2>
+        <p className={ui.lead}>
+          <strong>{t.kindergarten.concept}</strong>
+        </p>
+        {t.kindergarten.description.map((para: any, index: number) => (
+          <p key={index} className={ui.lead}>
+            {para.type === 'paragraph' ? renderContent(para.content) : para}
+          </p>
+        ))}
+
+        <p className={styles.status}>
+          <span className={ui.tag}>{t.kindergarten.status}</span>
+        </p>
+        <h3 className={styles.progressTitle}>{t.kindergarten.progressBars.phases}</h3>
+        <ol className={styles.road}>
+          {t.kindergarten.progressBars.phaseLabels.map((phase) => (
+            <li key={phase}>{phase}</li>
+          ))}
+        </ol>
       </div>
     </section>
   );

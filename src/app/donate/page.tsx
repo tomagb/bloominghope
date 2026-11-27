@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { bankDetails } from '@/data/bank';
 import { translations } from '@/data/translations';
+import ui from '@/styles/ui.module.css';
 import styles from './donate.module.css';
 
 export default function Donate() {
@@ -15,10 +16,10 @@ export default function Donate() {
   return (
     <main>
       <Header />
-      <section className={styles.donateHero}>
-        <div className="container">
-          <h1 className={styles.title}>{t.title}</h1>
-          <p className={styles.subtitle}>{t.subtitle}</p>
+      <section className={ui.top}>
+        <div className={ui.wrap}>
+          <h1>{t.title}</h1>
+          <p>{t.subtitle}</p>
         </div>
       </section>
 
@@ -44,11 +45,11 @@ export default function Donate() {
             hint={t.bank.detailsHint}
             buttonLabels={t.bank}
           />
-          <div className={styles.meta}>
-            <span>{t.bank.bankLabel}: <strong>{bankDetails.bank}</strong></span>
-            <span>{t.bank.currencyLabel}: <strong>{bankDetails.currency}</strong></span>
-            <span>{t.bank.taxIdLabel}: <strong>{bankDetails.taxId}</strong></span>
-          </div>
+          <p className={styles.meta}>
+            {t.bank.bankLabel}: <strong>{bankDetails.bank}</strong> · {t.bank.currencyLabel}:{' '}
+            <strong>{bankDetails.currency}</strong> · {t.bank.taxIdLabel}:{' '}
+            <strong>{bankDetails.taxId}</strong>
+          </p>
         </div>
 
         <div className={styles.howTo}>
@@ -67,7 +68,7 @@ export default function Donate() {
             href="https://formular230.ro/asociatia-blooming-hope"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.ctaButton}
+            className={`${ui.btn} ${ui.amber}`}
           >
             {t.form230.buttonText}
           </a>

@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './MissionPillar.module.css';
+import ui from '@/styles/ui.module.css';
+import { Icon, IconName } from './Icon';
 
 interface MissionPillarProps {
   title: string;
@@ -7,7 +8,7 @@ interface MissionPillarProps {
   index: number;
 }
 
-const icons = ['🎯', '🚀', '🤝', '💡', '❤️'];
+const icons: IconName[] = ['flag', 'briefcase', 'people', 'chip', 'heart'];
 
 export const MissionPillar: React.FC<MissionPillarProps> = ({
   title,
@@ -15,10 +16,12 @@ export const MissionPillar: React.FC<MissionPillarProps> = ({
   index,
 }) => {
   return (
-    <div className={styles.pillar}>
-      <div className={styles.icon}>{icons[index % icons.length]}</div>
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
+    <div className={ui.card}>
+      <span className={ui.icon}>
+        <Icon name={icons[index % icons.length]} />
+      </span>
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
   );
 };

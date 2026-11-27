@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/data/translations';
+import ui from '@/styles/ui.module.css';
 import styles from './Hero.module.css';
 
 export const Hero: React.FC = () => {
@@ -11,18 +12,14 @@ export const Hero: React.FC = () => {
   const t = translations[language];
 
   return (
-    <section className={styles.hero}>
-      <div className="{styels.container}">
-        <div className={styles.content}>
-          <h1 className={styles.title}>{t.hero.title}</h1>
-          <p className={styles.subtitle}>{t.hero.subtitle}</p>
-          <div className={styles.form230Container}>
-            <Link href="/donate" className={styles.form230Button}>{t.hero.form230}</Link>
-          </div>
-          <div className={styles.ctaContainer}>
-            <a href="#kindergarten" className={styles.ctaSecondary}>{t.hero.cta1}</a>
-            <a href="#growth-lab" className={styles.ctaSecondary}>{t.hero.cta2}</a>
-          </div>
+    <section className={`${ui.section} ${ui.center}`}>
+      <div className={ui.wrap}>
+        <h1 className={ui.heading}>{t.hero.title}</h1>
+        <p className={ui.lead}>{t.hero.subtitle}</p>
+        <div className={styles.buttons}>
+          <Link href="/donate" className={`${ui.btn} ${ui.purple}`}>{t.hero.form230}</Link>
+          <a href="#kindergarten" className={`${ui.btn} ${ui.outline}`}>{t.hero.cta1}</a>
+          <a href="#growth-lab" className={`${ui.btn} ${ui.outline}`}>{t.hero.cta2}</a>
         </div>
       </div>
     </section>

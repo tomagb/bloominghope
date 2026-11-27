@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './WorkshopCard.module.css';
+import ui from '@/styles/ui.module.css';
+import { Icon, IconName } from './Icon';
 
 interface WorkshopCardProps {
   title: string;
@@ -7,7 +8,7 @@ interface WorkshopCardProps {
   index: number;
 }
 
-const icons = ['🔒', '💰', '🌱', '⚗️'];
+const icons: IconName[] = ['lock', 'coin', 'leaf', 'flask'];
 
 export const WorkshopCard: React.FC<WorkshopCardProps> = ({
   title,
@@ -15,10 +16,12 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
   index,
 }) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.icon}>{icons[index % icons.length]}</div>
-      <h4 className={styles.title}>{title}</h4>
-      <p className={styles.description}>{description}</p>
+    <div className={ui.card}>
+      <span className={ui.icon}>
+        <Icon name={icons[index % icons.length]} />
+      </span>
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
   );
 };

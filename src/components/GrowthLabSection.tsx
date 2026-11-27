@@ -3,6 +3,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/data/translations';
+import ui from '@/styles/ui.module.css';
 import styles from './GrowthLabSection.module.css';
 import { WorkshopCard } from './WorkshopCard';
 
@@ -11,13 +12,15 @@ export const GrowthLabSection: React.FC = () => {
   const t = translations[language];
 
   return (
-    <section className={styles.lab} id="growth-lab">
-      <div className="container">
-        <h2 className={styles.title}>{t.growthLab.title}</h2>
-        <h3 className={styles.subtitle}>{t.growthLab.subtitle}</h3>
-        <p className={styles.description}>{t.growthLab.description}</p>
+    <section className={`${ui.section} ${ui.center}`} id="growth-lab">
+      <div className={ui.wrap}>
+        <h2 className={ui.heading}>{t.growthLab.title}</h2>
+        <p className={ui.lead}>
+          <strong>{t.growthLab.subtitle}</strong>
+        </p>
+        <p className={ui.lead}>{t.growthLab.description}</p>
 
-        <div className={styles.grid}>
+        <div className={ui.cards4}>
           {t.growthLab.workshops.map((workshop, index) => (
             <WorkshopCard
               key={index}
@@ -28,9 +31,9 @@ export const GrowthLabSection: React.FC = () => {
           ))}
         </div>
 
-        <div className={styles.stickyNote}>
-          {t.growthLab.stickyNote}
-        </div>
+        <p className={styles.soon}>
+          <span className={ui.tag}>{t.growthLab.soon}</span>
+        </p>
       </div>
     </section>
   );

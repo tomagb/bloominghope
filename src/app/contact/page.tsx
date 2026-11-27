@@ -5,6 +5,8 @@ import { Footer } from '@/components/Footer';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/data/translations';
+import { Icon, IconName } from '@/components/Icon';
+import ui from '@/styles/ui.module.css';
 import styles from './contact.module.css';
 import { useState } from 'react';
 
@@ -35,54 +37,62 @@ export default function Contact() {
     setSubmitted(true);
   };
 
-  const contactInfo = [
+  const contactInfo: { icon: IconName; title: string; content: string; link?: string }[] = [
     {
-      icon: '📧',
+      icon: 'mail',
       title: language === 'ro' ? 'Email' : 'Email',
       content: 'contact@bloominghope.ro',
       link: 'mailto:contact@bloominghope.ro',
     },
     {
-      icon: '📍',
+      icon: 'pin',
       title: language === 'ro' ? 'Locație' : 'Location',
       content: language === 'ro' ? 'Cluj-Napoca, România' : 'Cluj-Napoca, Romania',
-      link: '#',
     },
   ];
 
   return (
     <main>
       <Header />
-      <section className={styles.contactHero}>
-        <div className="container">
-          <h1 className={styles.title}>{t.contact?.title || (language === 'ro' ? 'Contact' : 'Contact')}</h1>
-          <p className={styles.subtitle}>
-            {t.contact?.subtitle || (language === 'ro'
-              ? 'Suntem dornici să auzim de la tine. Conectează-te cu noi pentru întrebări sau colaborări.'
-              : 'We\'d love to hear from you. Get in touch with us for any questions or collaborations.')}
-          </p>
+      <section className={ui.top}>
+        <div className={ui.wrap}>
+          <h1>{t.contact.title}</h1>
+          <p>{t.contact.subtitle}</p>
         </div>
       </section>
 
       <section className={styles.contactContent}>
-        <div className="container">
+        <div className={ui.wrap}>
           <div className={styles.contactGrid}>
             <div className={styles.contactInfo}>
               <h2 className={styles.sectionTitle}>
                 {language === 'ro' ? 'Informații de Contact' : 'Contact Information'}
               </h2>
               <div className={styles.infoList}>
-                {contactInfo.map((info, index) => (
-                  <a key={index} href={info.link} className={styles.infoItem}>
-                    <div className={styles.infoIcon}>{info.icon}</div>
-                    <div>
-                      <h3 className={styles.infoTitle}>{info.title}</h3>
-                      <p className={styles.infoContent}>{info.content}</p>
+                {contactInfo.map((info) => {
+                  const content = (
+                    <>
+                      <span className={ui.icon}>
+                        <Icon name={info.icon} />
+                      </span>
+                      <span>
+                        <strong className={styles.infoTitle}>{info.title}</strong>
+                        <span className={styles.infoContent}>{info.content}</span>
+                      </span>
+                    </>
+                  );
+                  // Doar adresa de email duce undeva.
+                  return info.link ? (
+                    <a key={info.icon} href={info.link} className={`${styles.infoItem} ${styles.infoLink}`}>
+                      {content}
+                    </a>
+                  ) : (
+                    <div key={info.icon} className={styles.infoItem}>
+                      {content}
                     </div>
-                  </a>
-                ))}
+                  );
+                })}
               </div>
-
             </div>
 
             <div className={styles.contactForm}>
@@ -127,7 +137,7 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className={styles.formGroup}>
+                <div className={`${styles.formGroup} ${styles.full}`}>
                   <label htmlFor="subject" className={styles.label}>
                     {language === 'ro' ? 'Subiect' : 'Subject'}
                   </label>
@@ -142,7 +152,7 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className={styles.formGroup}>
+                <div className={`${styles.formGroup} ${styles.full}`}>
                   <label htmlFor="message" className={styles.label}>
                     {language === 'ro' ? 'Mesaj' : 'Message'}
                   </label>
@@ -152,20 +162,19 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    rows={5}
+                    rows={4}
                     className={styles.textarea}
                   />
                 </div>
 
-                <p>
+                <p className={styles.privacy}>
+                  {language === 'ro' ? 'Cum folosim datele tale: ' : 'How we use your data: '}
                   <Link href="/privacy">
-                    {language === 'ro'
-                      ? 'Cum folosim datele tale: Politica de confidențialitate'
-                      : 'How we use your data: Privacy Policy'}
+                    {language === 'ro' ? 'Politica de confidențialitate' : 'Privacy Policy'}
                   </Link>
                 </p>
 
-                <button type="submit" className={styles.submitBtn}>
+                <button type="submit" className={`${ui.btn} ${ui.purple} ${styles.submitBtn}`}>
                   {language === 'ro' ? 'Deschide în email' : 'Open in email'}
                 </button>
               </form>

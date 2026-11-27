@@ -5,6 +5,7 @@ import { MissionSection } from '@/components/MissionSection';
 import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/data/translations';
+import ui from '@/styles/ui.module.css';
 import styles from './about.module.css';
 
 export default function About() {
@@ -14,10 +15,10 @@ export default function About() {
   return (
     <main>
       <Header />
-      <section className={styles.aboutHero}>
-        <div className="container">
-          <h1 className={styles.title}>{t.about?.title || (language === 'ro' ? 'Despre Noi' : 'About Us')}</h1>
-          <p className={styles.subtitle}>
+      <section className={ui.top}>
+        <div className={ui.wrap}>
+          <h1>{t.about?.title || (language === 'ro' ? 'Despre Noi' : 'About Us')}</h1>
+          <p>
             {t.about?.subtitle || (language === 'ro'
               ? 'Blooming Hope este o asociație dedicată transformării prin educație.'
               : 'Blooming Hope is an association dedicated to transformation through education.')}
@@ -25,7 +26,7 @@ export default function About() {
         </div>
       </section>
       <section className={styles.aboutContent}>
-        <div className="container">
+        <div className={styles.column}>
           <div className={styles.contentBlock}>
             <h2 className={styles.sectionTitle}>
               {language === 'ro' ? 'Viziunea Noastră' : 'Our Vision'}
@@ -43,16 +44,20 @@ export default function About() {
             </h2>
             <ul className={styles.valuesList}>
               <li>
-                <strong>{language === 'ro' ? 'Excelență' : 'Excellence'}</strong> - {language === 'ro' ? 'Închidem standarde înalte în toate activitățile noastre.' : 'We maintain high standards in all our activities.'}
+                <strong>{language === 'ro' ? 'Excelență' : 'Excellence'}</strong>
+                {language === 'ro' ? 'Menținem standarde înalte în toate activitățile noastre.' : 'We maintain high standards in all our activities.'}
               </li>
               <li>
-                <strong>{language === 'ro' ? 'Incluziune' : 'Inclusion'}</strong> - {language === 'ro' ? 'Toți tinerii merită o șansă de dezvoltare.' : 'Every young person deserves a chance to develop.'}
+                <strong>{language === 'ro' ? 'Incluziune' : 'Inclusion'}</strong>
+                {language === 'ro' ? 'Toți tinerii merită o șansă de dezvoltare.' : 'Every young person deserves a chance to develop.'}
               </li>
               <li>
-                <strong>{language === 'ro' ? 'Integritate' : 'Integrity'}</strong> - {language === 'ro' ? 'Acționăm cu onestitate și responsabilitate.' : 'We act with honesty and responsibility.'}
+                <strong>{language === 'ro' ? 'Integritate' : 'Integrity'}</strong>
+                {language === 'ro' ? 'Acționăm cu onestitate și responsabilitate.' : 'We act with honesty and responsibility.'}
               </li>
               <li>
-                <strong>{language === 'ro' ? 'Compasiune' : 'Compassion'}</strong> - {language === 'ro' ? 'Înțelegem și susținem fiecare individ.' : 'We understand and support each individual.'}
+                <strong>{language === 'ro' ? 'Compasiune' : 'Compassion'}</strong>
+                {language === 'ro' ? 'Înțelegem și susținem fiecare individ.' : 'We understand and support each individual.'}
               </li>
             </ul>
           </div>
@@ -69,7 +74,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <MissionSection />
+      <MissionSection soft />
       <Footer />
     </main>
   );
