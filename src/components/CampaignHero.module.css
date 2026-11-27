@@ -138,9 +138,10 @@
   margin-top: 40px;
   padding: 16px 28px;
   border-radius: 18px;
-  background: rgba(10, 22, 36, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .partners figure {
@@ -157,7 +158,8 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
   text-align: center;
-  color: #93a3b8;
+  color: #b6c3d6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .partners span {
